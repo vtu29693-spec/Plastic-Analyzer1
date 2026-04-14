@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plastic Analyzer Pro</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container {
+            width: 400px;
+            padding: 25px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 40px rgba(0,0,0,0.6);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 60px rgba(0,0,0,0.8);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .upload-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .upload-btn:hover {
+            transform: scale(1.1);
+        }
+
+        input {
+            display: none;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.7);
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.4);
+            font-size: 16px;
+            text-align: left;
+        }
+
+        .glow {
+            color: #00e6ff;
+            text-shadow: 0 0 10px #00e6ff;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="glow">♻️ Plastic Analyzer Pro</h1>
+    <p>Upload or capture an image to analyze plastic</p>
+
+    <label class="upload-btn">
+        📸 Choose Image
+        <input type="file" accept="image/*" id="imageInput" capture="environment">
+    </label>
+
+    <img id="preview">
+
+    <div id="result">Upload an image to begin analysis...</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
